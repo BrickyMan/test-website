@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+}
+
+.content {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+#intro {
+    height: 100vh;
+    background-color: #333333DE;
+    background-image: url(../imgs/bgc.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#intro * {
+    color: white;
+    text-decoration: none;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 0;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+.header-userbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.header-account {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49px;
+    margin-bottom: 50px;
+}
+
+.intro-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 15px 35px;
+    background-color: #333333;
+    border: 1px solid white;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.brands {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    padding: 30px 0;
+}
+
+.brands img {
+    padding: 0 15px;
+}
+
+.brands img:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+.section-heading {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-heading p {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+}
+
+.filter-btn {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filter-btn_name, .filter-btn_bg {
+    width: calc(100% - 6px);
+    border: 1px solid #D6D6D6;
+    background-color: white;
+    transition: .2s;
+}
+
+.filter-btn_name {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 17px 0;
+    position: relative;
+    top: -3px;
+}
+
+.filter-btn_bg {
+    height: calc(100% - 6px);
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: -1;
+}
+
+.filter-btn.current .filter-btn_bg,
+.filter-btn.current .filter-btn_name {
+    top: 0px;
+    left: 0px;
+    background-color: #333333;
+    border-color: #333333;
+    color: white;
+}
+
+.filter-btn.current .filter-btn_name {
+    padding: 20px 0;
+}
